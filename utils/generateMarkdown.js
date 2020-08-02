@@ -1,8 +1,7 @@
 // // function to generate markdown for README
 
 const generateMarkdown = (projectData, additionalFeatures) => {
-  return `
-# [${projectData.projectName}](http://www.github.com/${projectData.githubName}/${projectData.repoName})
+return `# [${projectData.projectName}](http://www.github.com/${projectData.githubName}/${projectData.repoName})
 
 ## Description
 ${projectData.projectDescript}
@@ -37,7 +36,7 @@ ${generateThirdParty(additionalFeatures)}
 ${generateTutorial(additionalFeatures)}
 
 ## Test
-${projectData.tests}
+  ${projectData.tests}
 
 ## Questions
 All questions can be directed to [my email](${projectData.emailAddress}) or [github](https://www.github.com/${projectData.githubName}).

@@ -1,5 +1,3 @@
-// Inquirer Package
-const inquirer = require("inquirer");
 // questions for user
 const {promptUser, additionalFeatures} = require('./utils/questions');
 // markdown generator

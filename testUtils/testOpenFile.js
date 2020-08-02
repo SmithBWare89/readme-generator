@@ -16,11 +16,12 @@ const openFilePrompt = () => {
                 return console.log('Your file is in the dist folder.');
             }
             else {
-                cp.exec('"dist/readme.md"', (err, stdout, stderr) => {
+                cp.exec('"dist/test-readme.md"', (err, stdout, stderr) => {
                     if (err) throw err;
                     console.log('Success! Your file will open!');
                 });
             };
         })
 }
+
 module.exports = openFilePrompt;
