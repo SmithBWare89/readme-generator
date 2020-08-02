@@ -4,15 +4,26 @@ const inquirer = require("inquirer");
 const {promptUser, additionalFeatures} = require('./utils/questions');
 // markdown generator
 const generateMarkdown = require('./utils/generateMarkdown');
+// create the file directory and write to the file
+const {writeFile, makeDirectory} = require('./utils/writeFile');
+// prompt user to open file
+const openFilePrompt = require('./utils/executeFile')
 
 // function call to initialize program
 (async () => {
     try{
+        // Accept project information
         const userInfo = await promptUser();
+        // Accept additional readme features questions
         const projectFeatures = await additionalFeatures();
+        // Generate readme markdown
         const generatedMarkdown = await generateMarkdown(userInfo ,projectFeatures);
-        // Write information to file
-        // Prompt user to execute file
+        // Make the file directory
+        await makeDirectory();
+        // Create the readme file using the markdown
+        await writeFile(generatedMarkdown);
+        // Ask the user if they'd like to open the file
+        await openFilePrompt();
     } catch (err) {
         console.log(err);
     }
