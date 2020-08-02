@@ -20,7 +20,7 @@ ${projectData.projectInstall}
 
 ## Usage
 ${projectData.usage}
-${generateUsageMedia(additionalFeatures.mediaConfirm)}
+${generateUsageMedia(additionalFeatures)}
 
 ## License
 ${generateLicense(projectData.licenses)}
