@@ -58,6 +58,13 @@ const promptUser = () => {
             },
             {
                 type: 'input',
+                name: 'contribution',
+                message: 'How can someone contribute to this project in the future?',
+                validate: userInput => !!(userInput.trim() || console.log('Please enter contribution instructions.'))
+
+            },
+            {
+                type: 'input',
                 name: 'tests',
                 message: 'Please detail any tests that can be used for your application or package.',
                 validate: userInput => !!(userInput.trim() || console.log('Please enter test instructions or N/A.'))

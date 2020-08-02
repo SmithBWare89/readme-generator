@@ -2,40 +2,46 @@
 
 const generateMarkdown = (projectData, additionalFeatures) => {
   return `
-    # [${projectData.projectName}](http://www.github.com/${projectData.githubName}/${projectData.repoName})
+# [${projectData.projectName}](http://www.github.com/${projectData.githubName}/${projectData.repoName})
 
-    ## Description
-    ${projectData.projectDescript}
+## Description
+${projectData.projectDescript}
 
-    ## Table of Contents
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [License](#license)
-    * [Languages](#languages)
-    * [Contributing](#contributing)
-    * [Tests](#tests)
+## Table of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Languages](#languages)
+* [Contributing](#contributing)
+* [Collaborator](#collaborators)
+* [Tests](#tests)
 
-    ## Installation
-    ${projectData.projectInstall}
+## Installation
+${projectData.projectInstall}
 
-    ## Usage
-    ${projectData.usage}
-    ${generateUsageMedia(additionalFeatures.mediaConfirm)}
+## Usage
+${projectData.usage}
+${generateUsageMedia(additionalFeatures.mediaConfirm)}
 
-    ## License
-    ${generateLicense(projectData.licenses)}
+## License
+${generateLicense(projectData.licenses)}
 
-    ## Languages
-    ${generateLanguages(projectData.languages)}
+## Languages
+${generateLanguages(projectData.languages)}
 
-    ${generateCollaborators(additionalFeatures)}
+## Contributing
+${projectData.contribution}
 
-    ## Test
-    ${projectData.tests}
+${generateCollaborators(additionalFeatures)}
+${generateThirdParty(additionalFeatures)}
+${generateTutorial(additionalFeatures)}
 
-    ## Questions
-    All questions can be directed to [my email](${projectData.emailAddress}) or [github](https://www.github.com/${projectData.githubName}).
- `;
+## Test
+${projectData.tests}
+
+## Questions
+All questions can be directed to [my email](${projectData.emailAddress}) or [github](https://www.github.com/${projectData.githubName}).
+  `;
 }
 
 const generateUsageMedia = features => {
@@ -70,20 +76,12 @@ const generateCollaborators = features => {
     // If there is mare than one collaborator
     if (Number(features.collabTotal) > 1){
       // Create a new line for each collaborator
-      return `
-      ## Collaborators
-      ${collabArray.join('\n')}
-      `;
+      return `## Collaborators` + '\n' + `${collabArray.join('\n')}`;
     }
     // Else create only the one
     else {
-      return `
-      ## Collaborators
-      ${collabArray}`;
+      return `## Collaborators` + '\n' + `${collabArray}`;
     }
-  } else {
-    const featureInfo = features;
-    return generateThirdParty(featureInfo);
   }
 }
 
@@ -98,14 +96,10 @@ const generateThirdParty = features => {
     // If number of assets > 1
     if (Number(features.thirdPartyTotal > 1)){
       // Create a new line for each asset
-      return `
-      ## Collaborators
-      ${thirdPartyArray.join(`\n`)}`;
+      return `## Collaborators` + '\n' + `${thirdPartyArray.join(`\n`)}`;
     } else {
       // Else create only the one
-      return `
-      ## Collaborators
-      ${thirdPartyArray}`;
+      return `## Collaborators` + '\n' + `${thirdPartyArray}`;
     }
   } 
   // If there are collaborators and assets
@@ -123,9 +117,6 @@ const generateThirdParty = features => {
       // Create only the one
       return `${thirdPartyArray}`;
     }
-  } else {
-    const featureInfo = features
-    return generateTutorial(featureInfo);
   }
 }
 
@@ -140,13 +131,10 @@ const generateTutorial = features => {
     // If the number of tutorials is > 1
     if (Number(features.thirdPartyTotal > 1)){
     // Return markdown with each item from the array on a new line
-    return `
-    ## Collaborators
-    ${tutorialArray.join(`\n`)}`;
+    return `## Collaborators` + '\n' + `${tutorialArray.join(`\n`)}`;
     } else {
       // Else return only the one item without a new line
-      return `
-      ## Collaborators
+      return `## Collaborators
       ${tutorialArray}`;
     }
   }
@@ -167,8 +155,7 @@ const generateTutorial = features => {
       }
   }
   else if (!(features.collabConfirm && features.thirdPartyConfirm && features.tutorialConfirm)) {
-    return `## Collaborators
-    There were no other contributors to this project.`
+    return `## Collaborators` + '\n' + `There were no other contributors to this project.`
   }
 }
 
@@ -180,7 +167,7 @@ const generateLicense = license => {
 
 const generateLanguages = languages => {
   const languageArray = [];
-  if (languages.indexOf('HTML-5') > -1) languageArray.push(`![HTML-5 Bade](https://img.shields.io/badge/Language-HTML--5-blue)`);
+  if (languages.indexOf('HTML-5') > -1) languageArray.push(`![HTML-5 Badge](https://img.shields.io/badge/Language-HTML--5-blue)`);
   if (languages.indexOf('CSS') > -1) languageArray.push(`![CSS Badge](https://img.shields.io/badge/Language-CSS-blue)`);
   if (languages.indexOf('jQuery') > -1) languageArray.push(`![jQuery Badge](https://img.shields.io/badge/Language-jQuery-blue)`);
   if (languages.indexOf('Javascript') > -1) languageArray.push(`![Javascript Badge](https://img.shields.io/badge/Language-Javascript-blue)`);
