@@ -54,10 +54,10 @@ const generateUsageMedia = features => {
     // If there is more than 1 collaborator
     if (Number(features.mediaCount) > 1) {
       // Create a new line for each
-      return mediaItems.join('\n');
+      return `${mediaItems.join('\n')}`;
     }
     else {
-      return mediaItems;
+      return `${mediaItems}`;
     }
   } else {
     return ``;
@@ -81,6 +81,8 @@ const generateCollaborators = features => {
     else {
       return `## Collaborators` + '\n' + `${collabArray}`;
     }
+  } else {
+    return '';
   }
 }
 
@@ -170,7 +172,7 @@ const generateLanguages = languages => {
   if (languages.indexOf('CSS') > -1) languageArray.push(`![CSS Badge](https://img.shields.io/badge/Language-CSS-blue)`);
   if (languages.indexOf('jQuery') > -1) languageArray.push(`![jQuery Badge](https://img.shields.io/badge/Language-jQuery-blue)`);
   if (languages.indexOf('Javascript') > -1) languageArray.push(`![Javascript Badge](https://img.shields.io/badge/Language-Javascript-blue)`);
-  if (languages.indexOf('Node') > -1) languageArray.push(`![Node Badge]{https://img.shields.io/badge/Language-Node-blue)`);
+  if (languages.indexOf('Node') > -1) languageArray.push(`![Node Badge](https://img.shields.io/badge/Language-Node-blue)`);
   if (languages.indexOf('PHP') > -1) languageArray.push(`![PHP Badge](https://img.shields.io/badge/Language-PHP-blue)`);
   return languageArray.length > 0 ? languageArray.join('\n') : languageArray
 }
