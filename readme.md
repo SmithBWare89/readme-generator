@@ -24,9 +24,9 @@ Click on the Readme title to navigate to the associated Github repository. Clone
 Run `node index` to run the program or `node test` in order to test the project.
 
 ### Walkthrough of how to install and use the readme generator.
-[![Readme Generator Walkthrough](https://img.youtube.com/vi/JOvcEToevro/0.jpg)](https://www.youtube.com/watch?v=JOvcEToevro)
+[![Readme Generator Walkthrough](https://img.youtube.com/vi/JOvcEToevro.jpg)](https://www.youtube.com/watch?v=JOvcEToevro)
 ### Walkthrough of how to test and generate a sample readme.
-[![Readme Generator Test Walkthrough](https://img.youtube.com/vi/UF32iKBjq9w/0.jpg)](https://www.youtube.com/watch?v=UF32iKBjq9w)
+[![Readme Generator Test Walkthrough](https://img.youtube.com/vi/UF32iKBjq9w.jpg)](https://www.youtube.com/watch?v=UF32iKBjq9w)
 
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
