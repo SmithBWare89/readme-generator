@@ -13,7 +13,7 @@ ${projectData.projectDescript}
 * [Languages](#languages)
 * [Contributing](#contributing)
 * [Collaborator](#collaborators)
-* [Tests](#tests)
+* [Tests](#test)
 
 ## Installation
 ${projectData.projectInstall}

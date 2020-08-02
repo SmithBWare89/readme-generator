@@ -20,7 +20,7 @@ const testInfo = {
     contribution: 'Create a pull request on my repository.',
     usage: 'Use the sign up sheet to request a personal run buddy!',
     tests: 'None',
-    languages: [ 'HTML-5', 'CSS', 'Javascript' ],
+    languages: [ 'HTML-5', 'CSS', 'Javascript'],
     licenses: 'MIT'
   }
 
