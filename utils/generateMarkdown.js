@@ -70,7 +70,7 @@ const generateCollaborators = features => {
     const collabArray = [];
     // Create and push markdown into the array for number specified
     for (let i = 0; i < Number(features.collabTotal); i++) {
-      collabArray.push(`Name - [GitHub Name](GitHub Link)`);
+      collabArray.push(`- Name - [GitHub Name](GitHub Link)`);
     }
     // If there is mare than one collaborator
     if (Number(features.collabTotal) > 1){
@@ -92,7 +92,7 @@ const generateThirdParty = features => {
     const thirdPartyArray = [];
     // Create and push markdown into the array based on number of assets specified
     for (let i = 0; i < Number(features.thirdPartyTotal); i++){
-      thirdPartyArray.push(`[Third Party Asset Name](Link or File Path)`);
+      thirdPartyArray.push(`- [Third Party Asset Name](Link or File Path)`);
     }
     // If number of assets > 1
     if (Number(features.thirdPartyTotal > 1)){
@@ -108,7 +108,7 @@ const generateThirdParty = features => {
     const thirdPartyArray = [];
     // Create and push markdown into the array based on number of assets specified
     for (let i = 0; i < Number(features.thirdPartyTotal); i++){
-      thirdPartyArray.push(`[Third Party Asset Name](Link or File Path)`);
+      thirdPartyArray.push(`- [Third Party Asset Name](Link or File Path)`);
     }
         // If number of assets > 1
     if (Number(features.thirdPartyTotal > 1)){
@@ -127,7 +127,7 @@ const generateTutorial = features => {
     const tutorialArray = [];
     // Push the markdown into the array for the specified number of tutorials
     for (let i = 0; i < Number(features.tutorialTotal); i++){
-      tutorialArray.push(`[Tutorial Name](Link or File Path)`);
+      tutorialArray.push(`- [Tutorial Name](Link or File Path)`);
     }
     // If the number of tutorials is > 1
     if (Number(features.thirdPartyTotal > 1)){
@@ -144,7 +144,7 @@ const generateTutorial = features => {
     const tutorialArray = [];
     // Create and push markdown into array based on number of tutorials
     for (let i = 0; i < Number(features.tutorialTotal); i++){
-      tutorialArray.push(`[Tutorial Name](Link or File Path)`);
+      tutorialArray.push(`- [Tutorial Name](Link or File Path)`);
     }
     // If the number of tutorials is > 1
     if (Number(features.thirdPartyTotal > 1)){
