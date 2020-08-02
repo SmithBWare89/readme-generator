@@ -48,14 +48,26 @@ const promptUser = () => {
                 type: 'input',
                 name: 'projectInstall',
                 message: 'Please provide any instructions on how to install your project.',
-                validate: userInput => !!(userInput.trim() || console.log('Please enter installation instructions.'))
+                validate: userInput => !!(userInput.trim() || console.log('Please enter installation instructions or N/A.'))
             },
             {
                 type: 'input',
                 name: 'usage',
                 message: 'Please provide details on how to use your project.',
-                validate: userInput => !!(userInput.trim() || console.log('Please enter installation instructions.'))
-            }
+                validate: userInput => !!(userInput.trim() || console.log('Please enter installation instructions or N/A.'))
+            },
+            {
+                type: 'input',
+                name: 'tests',
+                message: 'Please detail any tests that can be used for your application or package.',
+                validate: userInput => !!(userInput.trim() || console.log('Please enter test instructions or N/A.'))
+            },
+            {
+                type: 'checkbox',
+                name: 'languages',
+                message: 'Please select the programming languages used to develop this project:',
+                choices: ['HTML-5', 'CSS', 'Javascript', 'jQuery', 'Node', 'PHP']
+            },
             {
                 type: 'list',
                 name: 'licenses',
@@ -64,10 +76,9 @@ const promptUser = () => {
                 default: 'MIT'
             }
         ])
-}
+    }
 
-const projectQuestions = userInfo => {
-    if(!userInfo.features) userInfo.features;
+const additionalFeatures = () => {
     console.log(`
     =================
     Optional Features
@@ -128,10 +139,6 @@ const projectQuestions = userInfo => {
                 validate: userInput => !!(Number(userInput) || console.log(`<- That's not a number!`))
             },
         ])
-        .then(featuresData => {
-            userInfo.features = featuresData;
-            return userInfo;
-        })
 }
 
-module.exports = { promptUser, projectQuestions };
+module.exports = {promptUser, additionalFeatures};

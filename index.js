@@ -1,7 +1,7 @@
 // Inquirer Package
 const inquirer = require("inquirer");
 // questions for user
-const { promptUser, projectQuestions } = require('./utils/questions');
+const {promptUser, additionalFeatures} = require('./utils/questions');
 // markdown generator
 const generateMarkdown = require('./utils/generateMarkdown');
 
@@ -9,24 +9,11 @@ const generateMarkdown = require('./utils/generateMarkdown');
 (async () => {
     try{
         const userInfo = await promptUser();
-        const projectFeatures = await projectQuestions(userInfo);
-        // const generatedMarkdown = await generateMarkdown(projectFeatures);
-        // console.log(generatedMarkdown)
+        const projectFeatures = await additionalFeatures();
+        const generatedMarkdown = await generateMarkdown(userInfo ,projectFeatures);
         // Write information to file
         // Prompt user to execute file
     } catch (err) {
         console.log(err);
     }
 })();
-
-// // function to write README file
-// function writeToFile(fileName, data) {
-// }
-
-// // function to initialize program
-// function init() {
-
-// }
-
-
-// init();
