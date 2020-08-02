@@ -23,10 +23,10 @@ Click on the Readme title to navigate to the associated Github repository. Clone
 ## Usage
 Run `node index` to run the program or `node test` in order to test the project.
 
-### Walkthrough of how to install and use the readme generator.
-[![Readme Generator Walkthrough](https://img.youtube.com/vi/JOvcEToevro.jpg)](https://www.youtube.com/watch?v=JOvcEToevro)
-### Walkthrough of how to test and generate a sample readme.
-[![Readme Generator Test Walkthrough](https://img.youtube.com/vi/UF32iKBjq9w.jpg)](https://www.youtube.com/watch?v=UF32iKBjq9w)
+#### Walkthrough of how to install and use the readme generator.
+[![Readme Generator Walkthrough](./assets/images/walkthrough-screencap.jpg)](https://www.youtube.com/watch?v=JOvcEToevro)
+#### Walkthrough of how to test and generate a sample readme.
+[![Readme Generator Test Walkthrough](./assets/images/test-walkthrough-screencap.jpg)](https://www.youtube.com/watch?v=UF32iKBjq9w)
 
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -39,11 +39,10 @@ Run `node index` to run the program or `node test` in order to test the project.
 Create a pull request on the repository.
 
 ## Collaborators
-[Node](https://nodejs.org/en/)
-[How To Embed YouTube Videos In Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#youtube-videos)
-[Third Party Asset Name](Link or File Path)
-[Stack Overflow Question: How to print array items on a new line](https://stackoverflow.com/users/9513184/hev1?tab=profile)
-[Child Processes Tutorial](https://www.youtube.com/watch?v=BT2t1dck-IM)
+- [Node](https://nodejs.org/en/)
+- [How To Embed YouTube Videos In Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#youtube-videos)
+- [Stack Overflow Question: How to print array items on a new line](https://stackoverflow.com/users/9513184/hev1?tab=profile)
+- [Child Processes Tutorial](https://www.youtube.com/watch?v=BT2t1dck-IM)
 
 
 ## Test
